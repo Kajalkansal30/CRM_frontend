@@ -135,6 +135,7 @@ export const AuthProvider = ({ children }) => {
 
   // handleLoginCallback: Handle user login
   const handleLoginCallback = async (token) => {
+    console.log('Token received from login:', token); 
     localStorage.setItem('token', token);
     await loadUser(token);
   };
