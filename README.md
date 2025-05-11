@@ -74,6 +74,18 @@ After creating or updating the `.env` file, restart the development server to ap
 
 Note: Environment variables prefixed with `REACT_APP_` are automatically loaded by Create React App.
 
+### Using Token in API Requests
+
+The frontend stores the authentication token in the browser's `localStorage` under the key `token`. This token is automatically included in the headers of API requests as `x-auth-token`.
+
+If you want to manually test the backend API using PowerShell, use the following command format, replacing `<token>` with your actual token string:
+
+```powershell
+Invoke-RestMethod -Uri "https://crmbackend-eight.vercel.app/api/auth/user" -Headers @{Authorization="Bearer <token>"}
+```
+
+Make sure to include a space after `Bearer` before the token value.
+
 ## Project Structure
 
 - `src/pages/` - React components for different pages (Login, Dashboard, CustomerList, etc.)
