@@ -66,7 +66,7 @@ A key environment variable to include is:
 
 To set up the `.env` file, create a file named `.env` in the `mini-crm/frontend` directory and add your environment variables in the following format:
 
-```
+```env
 REACT_APP_GOOGLE_CLIENT_ID=your-google-client-id
 ```
 
@@ -99,6 +99,14 @@ Make sure to include a space after `Bearer` before the token value.
 
 - Build the app using `npm run build`.
 - Deploy the contents of the `build` folder to your preferred static hosting provider.
+
+## Known Limitations or Assumptions
+
+- The frontend assumes the backend API is running and accessible at `http://localhost:5000` or the configured proxy.
+- Google OAuth client ID must be correctly set in the `.env` file for authentication to work.
+- Some features may require additional backend setup or permissions.
+- CORS and authentication token handling depend on backend configuration.
+- Currently, the data for orders and customers is the same for every user. Future updates will enable different segment and campaign data for each user.
 
 ## Contributing
 
