@@ -56,6 +56,24 @@ The build output will be in the `build` directory, which can be deployed to any 
 - The frontend uses a proxy to forward API requests to the backend server running on `http://localhost:5000`.
 - Google OAuth client ID is configured in the source code (check `src/components/auth/GoogleLoginButton.js`).
 
+### .env File
+
+The frontend project uses a `.env` file to manage environment-specific variables. This file should be placed in the root of the `frontend` directory (`mini-crm/frontend/.env`).
+
+A key environment variable to include is:
+
+- `REACT_APP_GOOGLE_CLIENT_ID`: Your Google OAuth client ID used for user authentication.
+
+To set up the `.env` file, create a file named `.env` in the `mini-crm/frontend` directory and add your environment variables in the following format:
+
+```
+REACT_APP_GOOGLE_CLIENT_ID=your-google-client-id
+```
+
+After creating or updating the `.env` file, restart the development server to apply the changes.
+
+Note: Environment variables prefixed with `REACT_APP_` are automatically loaded by Create React App.
+
 ## Project Structure
 
 - `src/pages/` - React components for different pages (Login, Dashboard, CustomerList, etc.)
