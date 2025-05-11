@@ -43,7 +43,7 @@ const OrderList = () => {
           }
         };
 
-        const response = await axios.get('/api/orders', config);
+        const response = await axios.get('/orders', config);
         setOrders(response.data);
         setFilteredOrders(response.data);
       } catch (error) {
