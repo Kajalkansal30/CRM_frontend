@@ -1,0 +1,79 @@
+# Mini CRM Frontend
+
+This is the frontend application for the Mini CRM project. It is built using React and Material-UI.
+
+## Features
+
+- User authentication with Google OAuth and JWT
+- Responsive UI with Material-UI components
+- Pages for managing customers, orders, campaigns, and segments
+- Integration with backend API for data fetching and updates
+- React Router for client-side routing
+- Form validation with Formik and Yup
+- State management with React Context and React Query
+
+## Prerequisites
+
+- Node.js (v16 or higher recommended)
+- Backend API running and accessible (default proxy to http://localhost:5000)
+
+## Installation
+
+1. Navigate to the frontend directory:
+
+```bash
+cd mini-crm/frontend
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+## Running the Application
+
+- To start the development server:
+
+```bash
+npm start
+```
+
+This will start the React development server on `http://localhost:3000`.
+
+## Building for Production
+
+- To create a production build:
+
+```bash
+npm run build
+```
+
+The build output will be in the `build` directory, which can be deployed to any static hosting service such as Vercel, Netlify, or AWS S3.
+
+## Environment Variables
+
+- The frontend uses a proxy to forward API requests to the backend server running on `http://localhost:5000`.
+- Google OAuth client ID is configured in the source code (check `src/components/auth/GoogleLoginButton.js`).
+
+## Project Structure
+
+- `src/pages/` - React components for different pages (Login, Dashboard, CustomerList, etc.)
+- `src/components/` - Reusable UI components
+- `src/contexts/` - React Context providers for authentication and other global state
+- `src/api/` - Axios instance and API utilities
+- `src/hooks/` - Custom React hooks
+- `public/` - Static assets and HTML template
+
+## Deployment
+
+- Build the app using `npm run build`.
+- Deploy the contents of the `build` folder to your preferred static hosting provider.
+
+## Contributing
+
+Feel free to open issues or submit pull requests.
+
+## License
+
+This project is licensed under the ISC License.
