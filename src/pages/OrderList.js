@@ -40,7 +40,7 @@ const OrderList = () => {
     const fetchOrders = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await fetch('/api/orders', {
+        const response = await fetch('/orders', {
           headers: {
             'x-auth-token': token,
           },
