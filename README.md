@@ -106,7 +106,7 @@ Make sure to include a space after `Bearer` before the token value.
 - Google OAuth client ID must be correctly set in the `.env` file for authentication to work.
 - Some features may require additional backend setup or permissions.
 - CORS and authentication token handling depend on backend configuration.
-- Currently, the data for orders and customers is the same for every user. Future updates will enable different segment and campaign data for each user.
+- Currently, the data for orders and customers is the same for every user. Future updates will enable different users having customers and orders as they ask. but for now we have different segment and campaign data for each user to apply CRUD operation accordingly.
 
 ## Contributing
 
