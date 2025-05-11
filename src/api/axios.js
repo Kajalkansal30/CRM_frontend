@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 const instance = axios.create({
-  baseURL: 'http://localhost:5000/api', // Update this if the backend runs on a different host/port
+  baseURL: 'https://crmbackend-eight.vercel.app/api', // Updated to deployed backend URL
+  timeout: 10000,
 });
 
 // Add a request interceptor to include token in headers
